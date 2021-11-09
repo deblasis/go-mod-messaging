@@ -31,7 +31,7 @@ type MessageBusConfig struct {
 	PublishHost HostInfo
 	// SubscribeHost contains the connection information for a subscribing on 0mq
 	SubscribeHost HostInfo
-	// Type indicates the message queue platform being used. eg. "zero" for 0mq
+	// Type indicates the message queue platform being used. eg. "mqtt" for MQTT
 	Type string
 	// Optional contains all other properties of message bus that is specific to
 	// certain concrete implementation like MQTT's QoS, for example

@@ -32,16 +32,6 @@ var msgConfig = types.MessageBusConfig{
 	},
 }
 
-func TestNewMessageClientZeroMq(t *testing.T) {
-
-	msgConfig.Type = ZeroMQ
-	_, err := NewMessageClient(msgConfig)
-
-	if assert.NoError(t, err, "New Message client failed: ", err) == false {
-		t.Fatal()
-	}
-}
-
 func TestNewMessageClientMQTT(t *testing.T) {
 	messageBusConfig := msgConfig
 	messageBusConfig.Type = MQTT
